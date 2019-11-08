@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <!-- Nadpisana wartość grubości obwódki okrągłych grafik - było aż 8dp- przy małych grafikach to okropne-->
+    <dimen name="bthumbnail_default_border">2dp</dimen>
+</resources>

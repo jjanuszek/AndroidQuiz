@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pattern_repeated"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    tools:context=".quiz.QuizActivity">
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/progress"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quizLogo"
+        app:layout_constraintEnd_toStartOf="@id/timeLeftProgress"
+        app:layout_constraintStart_toEndOf="@id/quizLogo"
+        app:layout_constraintTop_toTopOf="@id/quizLogo"
+        app:spb_maxStateNumber="five"
+        app:spb_stateForegroundColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Przykładowe pytanie jakieś o treści jakiejść i tak dalej na ktore trzeba odpowiedziec i tak dalej?"
+        android:textColor="#eeeeee"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/ans_a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quizLogo" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/ans_a"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="4dp"
+        android:duplicateParentState="true"
+        android:text="Text"
+        app:bootstrapBrand="secondary"
+        app:bootstrapSize="md"
+        app:fontAwesomeIcon="fa_hand_pointer_o"
+        app:layout_constraintBottom_toTopOf="@+id/ans_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionText"
+        app:roundedCorners="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/ans_b"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:duplicateParentState="true"
+        android:text="Text"
+        app:bootstrapBrand="secondary"
+        app:bootstrapSize="md"
+        app:fontAwesomeIcon="fa_hand_pointer_o"
+        app:layout_constraintBottom_toTopOf="@+id/ans_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_a"
+        app:roundedCorners="true" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/ans_c"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
+        android:duplicateParentState="true"
+        android:text="Text"
+        app:bootstrapBrand="secondary"
+        app:bootstrapSize="md"
+        app:fontAwesomeIcon="fa_hand_pointer_o"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans_b"
+        app:roundedCorners="true" />
+
+    <ImageView
+        android:id="@+id/quizLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/questionText"
+        app:layout_constraintEnd_toStartOf="@+id/progress"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_language_java" />
+
+    <ImageView
+        android:id="@+id/levelImageView"
+        android:layout_width="36dp"
+        android:layout_height="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/quizLogo"
+        app:layout_constraintEnd_toEndOf="@+id/quizLogo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/quizLogo"
+        app:layout_constraintTop_toTopOf="@+id/quizLogo"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_level_easy" />
+
+    <rjsv.circularview.CircleView
+        android:id="@+id/timeLeftProgress"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="8dp"
+        app:arcWidth="10dp"
+        app:enabled="false"
+        app:layout_constraintBottom_toBottomOf="@+id/quizLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/progress"
+        app:layout_constraintTop_toTopOf="@id/quizLogo"
+        app:progressColor="@color/color_progress"
+        app:progressCurrentValue="40"
+        app:progressMaximumValue="40"
+        app:progressMinimumValue="0"
+        app:textColor="#ffffff"
+        app:textSize="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quizy Android</string>
+    <string name="navigation_news">Nowiny</string>
+    <string name="navigation_quiz">Quizy</string>
+    <string name="navigation_profile">Profil</string>
+    <string name="anonym_name">Nie zalogowany</string>
+    <string name="level_easy">Łatwy</string>
+    <string name="level_average">Średni</string>
+    <string name="level_hard">Trudny</string>
+    <string name="lang_android">Android</string>
+    <string name="lang_kotlin">Kotlin</string>
+    <string name="lang_java">Java</string>
+    <string name="not_logged_like">Zaloguj się, by polubić</string>
+    <string name="not_logged_news">Zaloguj się, by opublikować</string>
+    <string name="time_is_up">"Czas upłynął!"</string>
+</resources>

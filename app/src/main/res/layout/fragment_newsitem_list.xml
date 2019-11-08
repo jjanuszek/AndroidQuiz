@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feed_item_list"
+        android:name="pl.wrzosdev.quiz.FeedItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_pattern_repeated"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layoutManager="LinearLayoutManager"
+        tools:context="pl.wrzosdev.quiz.news.NewsListFragment"
+        tools:listitem="@layout/fragment_newsitem" />
+
+    <ProgressBar
+        android:id="@+id/loader_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:clickable="true"
+        android:padding="100dp"
+        android:visibility="gone" />
+</FrameLayout>

@@ -1,0 +1,210 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#38374f">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+            android:id="@+id/circleImageProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_anonym_face"
+            app:bootstrapBrand="secondary"
+            app:bootstrapSize="xs"
+            app:hasBorder="true"
+            app:layout_constraintBottom_toTopOf="@+id/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:text="@string/anonym_name"
+            android:textColor="#fafafa"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/circleImageProfile"
+            app:layout_constraintTop_toTopOf="@+id/circleImageProfile" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="8dp"
+            android:text="20m"
+            android:textColor="#fafafa"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name" />
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/news_comment_bg"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circleImageProfile">
+
+            <TextView
+                android:id="@+id/quizTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingTop="4dp"
+                android:text="Java Łatwy"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/comment"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:maxLines="3"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="Może i test był łatwy, ale ja łatwa nie jestem! ;) :):) :* cmok ostatnio szłam na miasto i tam takiego chłopaka spotkałam i pozniej jeszcze dwóch a potem jeszcze zaszłam do sklepu i juz do domu wrocilam w sumie"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quizTitle" />
+
+            <TextView
+                android:id="@+id/add_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="3"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="Add Comment"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background" />
+
+            <EditText
+                android:id="@+id/edit_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Co myślisz o swoim osiągnięciu?"
+                android:maxLength="260"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:textAlignment="center"
+                android:textColor="#fafafa"
+                android:textColorHint="#ccfafafa"
+                android:textSize="14dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/background" />
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/pointsImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="344dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/ic_rewards_trophy_5" />
+
+        <TextView
+            android:id="@+id/pointsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="231"
+            android:textColor="#fafafa"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/pointsImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pointsImage"
+            app:layout_constraintTop_toTopOf="@+id/pointsImage" />
+
+        <CheckBox
+            android:id="@+id/likesImage"
+            android:layout_width="40dp"
+            android:layout_height="52dp"
+            android:button="@drawable/thumbupselector"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/pointsImage"
+            app:layout_constraintEnd_toEndOf="@+id/time"
+            app:layout_constraintStart_toStartOf="@+id/time"
+            app:layout_constraintTop_toTopOf="@+id/pointsImage" />
+
+        <TextView
+            android:id="@+id/respects"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:padding="8dp"
+            android:text="21"
+            android:textColor="#fafafa"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/likesImage"
+            app:layout_constraintEnd_toStartOf="@+id/likesImage"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/likesImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

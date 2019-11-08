@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:paddingBottom="10dp"
+
+            android:paddingTop="10dp"
+            android:text="Wybierz Quiz"
+            android:textAlignment="center"
+            android:textColor="#fafafa"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/quest_item_list"
+            android:name="pl.wrzosdev.quiz.QuestionSetItemFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_pattern_repeated"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="8dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="pl.wrzosdev.quiz.chooser.QuizChooserFragment"
+            tools:listitem="@layout/fragment_quizitem" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loader_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000"
+        android:clickable="true"
+        android:padding="100dp"
+        android:visibility="gone" />
+</FrameLayout>
